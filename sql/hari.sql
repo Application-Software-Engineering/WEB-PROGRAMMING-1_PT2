@@ -24,34 +24,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dosen`
+-- Struktur dari tabel `hari`
 --
 
-CREATE TABLE `dosen` (
+CREATE TABLE `hari` (
   `id` int(11) NOT NULL,
-  `nid` varchar(12) NOT NULL,
-  `namaDosen` varchar(50) NOT NULL,
-  `alamat` text NOT NULL,
-  `mataKuliah` varchar(50) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
+  `nama_hari` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `dosen`
+-- Dumping data untuk tabel `hari`
 --
 
-INSERT INTO `dosen` (`id`, `nid`, `namaDosen`, `alamat`, `mataKuliah`, `created_at`, `updated_at`) VALUES
-(1, '1234', 'Rukawa', 'Gatau', 'Web Programming', '2025-05-03 02:01:37', '2025-06-20 09:09:08');
+INSERT INTO `hari` (`id`, `nama_hari`) VALUES
+(1, 'Senin'),
+(2, 'Selasa'),
+(3, 'Rabu'),
+(4, 'Kamis'),
+(5, 'Jumat'),
+(6, 'Sabtu'),
+(7, 'Minggu');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `dosen`
+-- Indeks untuk tabel `hari`
 --
-ALTER TABLE `dosen`
+ALTER TABLE `hari`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -59,10 +60,10 @@ ALTER TABLE `dosen`
 --
 
 --
--- AUTO_INCREMENT untuk tabel `dosen`
+-- AUTO_INCREMENT untuk tabel `hari`
 --
-ALTER TABLE `dosen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+ALTER TABLE `hari`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

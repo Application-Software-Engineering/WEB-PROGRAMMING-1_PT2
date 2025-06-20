@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 14 Jun 2025 pada 07.08
+-- Waktu pembuatan: 20 Jun 2025 pada 11.49
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -44,7 +44,8 @@ INSERT INTO `rbac` (`id`, `role_id`, `menu_id`, `created_at`, `updated_at`) VALU
 (2, 1, 2, '2025-06-14 02:15:17', NULL),
 (3, 1, 3, '2025-06-14 02:18:13', NULL),
 (4, 2, 1, '2025-06-14 02:19:03', NULL),
-(5, 3, 3, '2025-06-14 02:20:32', NULL);
+(5, 3, 3, '2025-06-14 02:20:32', NULL),
+(6, 1, 4, '2025-06-20 07:24:53', NULL);
 
 --
 -- Indexes for dumped tables
@@ -64,7 +65,7 @@ ALTER TABLE `rbac`
 -- AUTO_INCREMENT untuk tabel `rbac`
 --
 ALTER TABLE `rbac`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

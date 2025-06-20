@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 24 Bulan Mei 2025 pada 06.59
+-- Waktu pembuatan: 20 Jun 2025 pada 11.48
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `matkul` (
   `id` int(11) NOT NULL,
-  `nama` varchar(50) NOT NULL,
+  `namaMatkul` varchar(50) NOT NULL,
   `deskripsi` text NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
@@ -39,7 +39,7 @@ CREATE TABLE `matkul` (
 -- Dumping data untuk tabel `matkul`
 --
 
-INSERT INTO `matkul` (`id`, `nama`, `deskripsi`, `created_at`, `updated_at`) VALUES
+INSERT INTO `matkul` (`id`, `namaMatkul`, `deskripsi`, `created_at`, `updated_at`) VALUES
 (1, 'Web Programming', 'Menjelaskan tentang koding website', '2025-04-12 04:35:25', NULL),
 (2, 'Graphic Design', 'Menjelaskan tentang penggunaan corel', '2025-04-12 04:42:16', NULL);
 

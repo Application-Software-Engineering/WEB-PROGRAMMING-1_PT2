@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 24 Bulan Mei 2025 pada 06.59
+-- Waktu pembuatan: 20 Jun 2025 pada 11.48
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -41,9 +41,11 @@ CREATE TABLE `auth` (
 --
 
 INSERT INTO `auth` (`id`, `username`, `password`, `role`, `created_at`, `updated_at`) VALUES
-(1, 'admin', '$2y$10$M4kWODw4jmhGhG22P39HWO6iVAtM3xlK5HJ/qykmWtAO42hCp7hOC', 'administrator', '2025-05-03 04:27:23', NULL),
-(2, 'izaa', '$2y$10$UJTpc4aC1OjqcudWouijjuC//dPz.FkK/0e58P6ZhjxL6Jo4xRaza', 'administrator', '2025-05-03 04:29:53', NULL),
-(3, 'test', '$2y$10$ghMunNmMmF1WIOKNrab9M.N0G4WFkdTxgoMYPxYEwH7hzGwIufx6q', 'administrator', '2025-05-03 04:32:53', NULL);
+(1, 'admin', '$2y$10$ghMunNmMmF1WIOKNrab9M.N0G4WFkdTxgoMYPxYEwH7hzGwIufx6q', '1', '2025-05-03 04:27:23', '2025-06-14 02:30:26'),
+(2, 'mhs', '$2y$10$ghMunNmMmF1WIOKNrab9M.N0G4WFkdTxgoMYPxYEwH7hzGwIufx6q', '2', '2025-05-03 04:29:53', '2025-06-14 02:30:20'),
+(3, 'dosen', '$2y$10$ghMunNmMmF1WIOKNrab9M.N0G4WFkdTxgoMYPxYEwH7hzGwIufx6q', '3', '2025-05-03 04:32:53', '2025-06-14 02:30:11'),
+(4, 'admin1', '$2y$10$hE2sOVdLv289Vf98qzLaaOXKXRPjTc/lAeuWjWKIDPU3IO5nIVxX.', '1', '2025-06-14 03:58:48', NULL),
+(6, 'mhs1', '$2y$10$vVY//B79iKlm01mn148Ya.P4wINymEThP2oAHBuSdr1k56Gcvvz.u', '2', '2025-06-14 04:00:22', NULL);
 
 --
 -- Indexes for dumped tables
@@ -63,7 +65,7 @@ ALTER TABLE `auth`
 -- AUTO_INCREMENT untuk tabel `auth`
 --
 ALTER TABLE `auth`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

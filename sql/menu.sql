@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 24 Bulan Mei 2025 pada 06.59
+-- Waktu pembuatan: 20 Jun 2025 pada 11.48
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -43,7 +43,8 @@ CREATE TABLE `menu` (
 INSERT INTO `menu` (`id`, `namaMenu`, `url`, `parent_id`, `created_at`, `updated_at`) VALUES
 (1, 'Data Mahasiswa', '../../pages/mahasiswa/tampilDatamhs.php', NULL, '2025-05-24 03:43:04', '2025-05-24 04:01:11'),
 (2, 'Data Dosen', '../../pages/dosen/tampilDataDosen.php', NULL, '2025-05-24 03:43:04', '2025-05-24 04:02:05'),
-(3, 'Data Matakuliah', '../../pages/matkul/tampilDataMatkul.php', NULL, '2025-05-24 04:01:02', '2025-05-24 04:02:15');
+(3, 'Data Matakuliah', '../../pages/matkul/tampilDataMatkul.php', NULL, '2025-05-24 04:01:02', '2025-05-24 04:02:15'),
+(4, 'Jadwal', '../../pages/jadwal/tampilDataJadwal.php', NULL, '2025-06-20 07:23:23', '2025-06-20 07:41:24');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +64,7 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT untuk tabel `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

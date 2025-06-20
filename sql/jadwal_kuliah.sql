@@ -24,34 +24,38 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dosen`
+-- Struktur dari tabel `jadwal_kuliah`
 --
 
-CREATE TABLE `dosen` (
+CREATE TABLE `jadwal_kuliah` (
   `id` int(11) NOT NULL,
-  `nid` varchar(12) NOT NULL,
-  `namaDosen` varchar(50) NOT NULL,
-  `alamat` text NOT NULL,
-  `mataKuliah` varchar(50) NOT NULL,
+  `id_kelas` int(11) DEFAULT NULL,
+  `id_matkul` int(11) DEFAULT NULL,
+  `id_dosen` int(11) DEFAULT NULL,
+  `id_ruangan` int(11) DEFAULT NULL,
+  `id_hari` int(11) DEFAULT NULL,
+  `id_jam_kuliah` int(11) DEFAULT NULL,
+  `semester` varchar(10) DEFAULT NULL,
+  `tahun_ajaran` varchar(10) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `dosen`
+-- Dumping data untuk tabel `jadwal_kuliah`
 --
 
-INSERT INTO `dosen` (`id`, `nid`, `namaDosen`, `alamat`, `mataKuliah`, `created_at`, `updated_at`) VALUES
-(1, '1234', 'Rukawa', 'Gatau', 'Web Programming', '2025-05-03 02:01:37', '2025-06-20 09:09:08');
+INSERT INTO `jadwal_kuliah` (`id`, `id_kelas`, `id_matkul`, `id_dosen`, `id_ruangan`, `id_hari`, `id_jam_kuliah`, `semester`, `tahun_ajaran`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, 1, 1, 1, 1, '2', '2025', '2025-06-20 07:51:18', '2025-06-20 09:12:04');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `dosen`
+-- Indeks untuk tabel `jadwal_kuliah`
 --
-ALTER TABLE `dosen`
+ALTER TABLE `jadwal_kuliah`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -59,10 +63,10 @@ ALTER TABLE `dosen`
 --
 
 --
--- AUTO_INCREMENT untuk tabel `dosen`
+-- AUTO_INCREMENT untuk tabel `jadwal_kuliah`
 --
-ALTER TABLE `dosen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+ALTER TABLE `jadwal_kuliah`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

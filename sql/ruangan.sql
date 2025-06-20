@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 20 Jun 2025 pada 11.48
+-- Waktu pembuatan: 20 Jun 2025 pada 11.49
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -24,34 +24,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dosen`
+-- Struktur dari tabel `ruangan`
 --
 
-CREATE TABLE `dosen` (
+CREATE TABLE `ruangan` (
   `id` int(11) NOT NULL,
-  `nid` varchar(12) NOT NULL,
-  `namaDosen` varchar(50) NOT NULL,
-  `alamat` text NOT NULL,
-  `mataKuliah` varchar(50) NOT NULL,
+  `nama_ruangan` varchar(50) DEFAULT NULL,
+  `kapasitas` int(11) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `dosen`
+-- Dumping data untuk tabel `ruangan`
 --
 
-INSERT INTO `dosen` (`id`, `nid`, `namaDosen`, `alamat`, `mataKuliah`, `created_at`, `updated_at`) VALUES
-(1, '1234', 'Rukawa', 'Gatau', 'Web Programming', '2025-05-03 02:01:37', '2025-06-20 09:09:08');
+INSERT INTO `ruangan` (`id`, `nama_ruangan`, `kapasitas`, `created_at`, `updated_at`) VALUES
+(1, 'LAB. BILLGATES', 22, '2025-06-20 09:16:28', NULL);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `dosen`
+-- Indeks untuk tabel `ruangan`
 --
-ALTER TABLE `dosen`
+ALTER TABLE `ruangan`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -59,10 +57,10 @@ ALTER TABLE `dosen`
 --
 
 --
--- AUTO_INCREMENT untuk tabel `dosen`
+-- AUTO_INCREMENT untuk tabel `ruangan`
 --
-ALTER TABLE `dosen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+ALTER TABLE `ruangan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
